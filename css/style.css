@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css?family=Chewy');
+        body {
+            margin: 0;
+            background-image: url(../images/wonder-woman-cartoon-wallpaper.jpg);
+        }
+
+        .bg {
+            z-index:1;
+            height:200px;
+            width: 100%;
+            background-image: url(../images/background4.png);
+
+        }
+        .movebgCSS {
+            animation: movebg 20s linear infinite;
+        }
+
+         @keyframes movebg {
+            to {
+                background-position: -1300px 0px;
+            }
+        }
+
+        /* GIRL WALKIN */
+
+
+        .girl {
+            width: 75px;
+            height: 133px;
+            position: absolute;
+            top: 65px;
+            background-image: url(../images/walk.png);
+            background-position: 0px 0px;
+        }
+
+        .moveCSS {
+            animation: walk 1s infinite steps(4);
+        }
+
+        @keyframes walk {
+            50% {
+                transform: translateX(50vw);
+                background-position: -300px 0px;
+            }
+            100% {
+                transform: translateX(110vw);
+            }
+        }
+        /* HERO */
+
+        .hero {
+            position: relative;
+            z-index: 1000;
+        }
+
+        .shakeCSS {
+            animation: shakeit 0.2s 4;
+        }
+
+        @keyframes shakeit {
+            25% {
+                transform: translateX(-10px);
+            }
+            75% {
+                transform: translateX(10px);
+            }
+        }
+
+        .jumpCSS {
+            animation: jump 2s infinite forwards /*cubic-bezier(1,-0.05,.01,.8)*/;
+        }
+
+        @keyframes jump {
+            25% {
+                transform: translateY(-25px);
+            }
+            50% {
+                transform: scale(0.88);
+            }
+            75% {
+                transform: translateY(-25px) scale(0.9);
+            }
+            100% {
+                transform: translateY(25px);
+            }
+        }
+
+        .onejumpCSS {
+            animation: onejump 0.3s 1 cubic-bezier(1,-0.05,.01,.8);
+        }
+
+        @keyframes onejump {
+            25% {
+                transform: translateY(-80px);
+            }
+            75% {
+                transform: translateY(0px);
+            }
+        }
+
+        .hitCSS {
+            animation: hit 2s infinite;
+        }
+
+        @keyframes hit {
+            25% {
+                transform: translateX(110px) rotate(30deg);
+            }
+            75% {
+                transform: translateX(0px);
+            }
+        }
+
+        .awCSS {
+            animation: aw 2s infinite;
+        }
+
+        @keyframes aw {
+            25% {
+                transform: translateX(10px) rotate(5deg) skewX(-8deg) rotateY(30deg);
+            }
+            75% {
+                transform: translateX(0px) ;
+            }
+        }
+
+        .fallCSS {
+            animation: fall 3s 1;
+        }
+
+        @keyframes fall {
+            25% {
+                transform: translateY(100px) rotateX(80deg) rotateZ(10deg);
+            }
+            75% {
+                transform: translateX(0px);
+            }
+        }
+
+        .fadeCSS {
+            animation: fa 3s linear infinite forwards;
+        }
+
+        @keyframes fa {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /*GLOW*/
+
+        div.litup {
+            position: absolute;
+            z-index: 0;
+            top: 78px;
+            left: 40px;
+            width: 1px;
+            height: 80px;
+            border-radius: 50%;
+
+        }
+
+        .glowCSS {
+            animation: gl 0.5s ease-in-out 1 forwards;
+        }
+
+        @keyframes gl {
+
+
+            /*to {
+                box-shadow: 10px 5px 60px 30px #fff;
+
+            }*/
+            from {
+    box-shadow: 0 0 85px 5px lightblue, 0 0 70px 6px lightblue, 0 0 60px 7px lightblue, 0 0 50px 8px lightblue, 0 0 40px 10px wheat, 0 0 30px 12px #fff, 0 0 20px 13px #fff, 0 0 30px 15px #fff;
+  }
+  to { /* use drop-shadow to make the glow oon char itself*/
+    box-shadow: 0 0 15px 1px wheat, 0 0 10px 1px lightblue, 0 0 20px 15px #fff, 0 0 30px 14px #fff, 0 0 40px 20px #fff, 0 0 50px 25px #fff, 0 0 60px 35px wheat, 0 0 100px 45px #fff;
+  }
+        }
+
+        /* mirror*/
+
+        .girl2 {
+            position: absolute;
+            width: 75px;
+            height: 133px;
+            top: 65px;
+            background-image: url(../images/walk.png);
+            background-position: 0px 0px;
+        }
+        .mirrorCSS {
+            animation: mir 1s linear forwards;
+        }
+
+        @keyframes mir {
+            100% {
+                transform: translateX(100px) rotateY(180deg);
+            }
+        }
+
+        /* FANCY */
+
+        .fancyCSS {
+            animation: fancystop 3s 1 steps(4) forwards;
+        }
+
+        .fancygirl2 {
+            animation: fancy 0.7s 1.5s 1 steps(4) forwards;
+        }
+
+        @keyframes fancy {
+            50% {
+                transform: translateX(80vw);
+            }
+            51% {
+                transform: translateX(80vw) rotateY(180deg);
+            }
+            99%{
+                transform: rotateY(180deg);
+            }
+            100% {
+                transform: translateX(0vw);
+            }
+        }
+
+        @keyframes fancystop {
+            50% {
+                transform: translateX(80vw);
+            }
+            51% {
+                transform: translateX(80vw) rotateY(180deg);
+            }
+            99%{
+                transform: rotateY(180deg);
+            }
+            100% {
+                transform: translateX(0vw);
+            }
+        }
+
+
+
+        /* BUTTONS */
+
+        div.buttons-style {
+            width: 90vw;
+            border: 5px solid white;
+            text-align: center;
+            width: 100%;
+            background-color: #4b8c04;
+            box-shadow: 1px 0px 10px 1px gray;
+        }
+        button {
+            margin: 5px;
+            color: lightgrey;
+            font-family: 'Chewy', cursive;
+            letter-spacing: 2px;
+            font-size: 1.1em;
+            padding: 15px;
+            cursor: pointer;
+            box-shadow: 0px 2px 1px 0px #fff;
+            border: 1px solid gray;
+            border-radius: 0% 20% 50% 20%;
+            outline: none;
+            background-color: #1f0061;
+        }
+        /*button:hover {
+            margin: 5px;
+            color: white;
+            font-size: 1em;
+            padding: 15px;
+            cursor: pointer;
+            box-shadow: 0px 2px 1px 0px #fff;
+            border: 1px solid gray;
+            border-radius: 0% 20% 50% 20%;
+            outline: none;
+            background-color: #1f0061;
+        }*/
+
+        .yellow {
+            background-color: #302695;
+            color: white;
+            box-shadow: 0px 2px 10px 2px #fff;
+        }
+
+        /* AUDIO */
+
+        audio {
+            display: none;
+        }
+
+        /* BODY EXPLOSION */
+        .body-parts {
+            display: none;
+        }
+
+        .body-partsCSS {
+            transition: all 1s;
+            filter: drop-shadow(0px 0px 8px rgba(255,231,0,0.8));
+            display: block;
+            animation: shrink 1s linear 2 reverse;
+
+        }
+        @keyframes shrink {
+            50% {
+                transform: scale(0.5);
+            }
+            51% {
+                transform: scale(0.1);
+            }
+            99%{
+                transform: rotateY(180deg);
+            }
+            100% {
+                transform: translateX(0vw);
+            }
+        }
+
+        .head {
+            position: absolute;
+            top: 20vh;
+            left: 20vw;
+            z-index: 1000;
+        }
+
+        .body {
+            position: absolute;
+            top: 40vh;
+            left: 20vw;
+            z-index: 1000;
+        }
+        .larm {
+           position: absolute;
+            top: 30vh;
+            left: 5vw;
+            z-index: 1000;
+        }
+        .rarm {
+            position: absolute;
+            top: 30vh;
+            left: 55vw;
+            z-index: 1000;
+        }
+        .lleg {
+            position: absolute;
+            top: 60vh;
+            left: 55vw;
+            z-index: 1000;
+        }
+        .rleg {
+            position: absolute;
+            top: 60vh;
+            left: 5vw;
+            z-index: 1000;
+        }
+        .dissapearCSS {
+            display: none;
+        }
