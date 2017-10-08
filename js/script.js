@@ -51,10 +51,31 @@ function makeHit(){
     console.log("make hit");
     char.classList.toggle("hitCSS");
     char2.classList.toggle("awCSS");
+    if(char2.classList.contains("awCSS")){
     var audio = document.getElementById("audio");
     audio.play();
-    button[3].classList.toggle("yellow");
+
+   let aud = document.querySelector("#audio3");
+   audio.addEventListener("ended", startAudio3)
+
+   function startAudio3(){
+   console.log("play audio3");
+   var audio = document.getElementById("audio3");
+   aud.play();
 }
+    }
+    button[3].classList.toggle("yellow");
+
+}
+//}
+
+//if (char2.addEventListener("ended", autoFall);
+
+ //   function autoFall(){
+ //   console.log("auto fall");
+ //   char2.classList.add("fallCSS");
+
+
 
 fallButton.addEventListener("click", makeFall)
 
@@ -121,6 +142,25 @@ function makeExplode(){
     charBodyParts[4].classList.toggle("body-partsCSS");
     charBodyParts[5].classList.toggle("body-partsCSS");
     button[10].classList.toggle("yellow");
-    var audio = document.getElementById("audio2");
-    audio.play();
+    if(char2.classList.contains("dissapearCSS")){
+        var audio = document.getElementById("audio2");
+        audio.play();
+    }
+
 }
+
+// Thursday lesson
+
+//let vid = document.querySelector("video");
+//let aud = document.querySelector("audio");
+
+//vid.play(); //start video when the page loads = autoplay in html
+//aud.addEventListene("ended", startVideo)
+
+//function startVideo (){
+//    console.log("Start video was called");
+//    vid.play();
+
+
+
+

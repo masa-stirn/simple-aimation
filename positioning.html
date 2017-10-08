@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        nav {
+            position: fixed;
+            background: cyan;
+            bottom: 0;
+            right: 0;
+        }
+        /* containar has to be pos:relative then we can set pos:absolute to children
+        section takes 100% of screen if secton has pos relative and element inside the secton is absolute and right 0 it will be all the way to the right of the section, if you dont specify the container to be relative then position absolute will be applied to body, always just top, right, left, bottom to the element that is pos absolut
+        */
+        section {
+            position: relative; /*this is the parent*/
+            background: lightblue;
+            margin: 2em;
+        }
+        section p {
+            position: absolute; /*relative to the section/parent*/
+            right: 0;
+            top: 0;
+        }
+        section img {
+            position: relative;
+            top: 20px;
+        }
+
+    </style>
+</head>
+
+
+<body>
+    <nav>
+        <a href="">ink</a><a href="">ink</a><a href="">ink</a><a href="">ink</a><a href="">ink</a>
+    </nav>
+    <section>
+        <h1>Hello</h1>
+        <img src="images/walk.png">
+        <p>this is CSS</p>
+    </section>
+    <section>
+        <h1>Hello</h1>
+        <img src="images/walk.png">
+        <p>this is CSS</p>
+    </section>
+    <section>
+        <h1>Hello</h1>
+        <img src="images/walk.png">
+        <p>this is CSS</p>
+    </section>
+    <section>
+        <h1>Hello</h1>
+        <img src="images/walk.png">
+        <p>this is CSS</p>
+    </section>
+    <section>
+        <h1>Hello</h1>
+        <img src="images/walk.png">
+        <p>this is CSS</p>
+    </section>
+    <section>
+        <h1>Hello</h1>
+        <img src="images/walk.png">
+        <p>this is CSS</p>
+    </section>
+
+
+</body>
+</html>
+
+<!--position:static; //next to each other
+position:fixed;  // overwrite fixed with position:static;
+position: relative; // move it relative to where it is, top, left, bottom, right
+positon: absolute; // position anything wherever I want, position samthing relatively to its nearest parent-->
