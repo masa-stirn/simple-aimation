@@ -18,8 +18,8 @@ let glowButton = document.querySelector("#glow");
 let mirrorButton = document.querySelector("#mirror");
 let fancyButton = document.querySelector("#fancy");
 let explodeButton = document.querySelector("#explode");
-
-
+let moveto30 = document.querySelector("#moveto30");
+let movefrom30 = document.querySelector("#movefrom30");
 
 shakeButton.addEventListener("click", makeShake)
 
@@ -35,6 +35,9 @@ function makeJump(){
     console.log("make jump");
     char.classList.toggle("jumpCSS");
     button[1].classList.toggle("yellow");
+    var jumpAudio = document.getElementById("#jump-audio");
+    jumpAudio.play();
+
 }
 
 onejumpButton.addEventListener("click", makeoneJump)
@@ -52,7 +55,7 @@ function makeHit(){
     char.classList.toggle("hitCSS");
     char2.classList.toggle("awCSS");
     if(char2.classList.contains("awCSS")){
-    var audio = document.getElementById("audio");
+    let audio = document.getElementById("audio");
     audio.play();
 
    let aud = document.querySelector("#audio3");
@@ -60,7 +63,7 @@ function makeHit(){
 
    function startAudio3(){
    console.log("play audio3");
-   var audio = document.getElementById("audio3");
+   let audio = document.getElementById("audio3");
    aud.play();
 }
     }
@@ -147,6 +150,22 @@ function makeExplode(){
         audio.play();
     }
 
+}
+
+moveto30.addEventListener("click", makeMoveTo30)
+
+function makeMoveTo30(){
+    console.log("make move to 30");
+    char.classList.toggle("moveto30CSS");
+    button[11].classList.toggle("yellow");
+}
+
+movefrom30.addEventListener("click", makeMoveFrom30)
+
+function makeMoveFrom30(){
+    console.log("make move from 30");
+    char.classList.toggle("movefrom30CSS");
+    button[12].classList.toggle("yellow");
 }
 
 // Thursday lesson

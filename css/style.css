@@ -54,7 +54,7 @@
         }
 
         .shakeCSS {
-            animation: shakeit 0.2s 4;
+            animation: shakeit 0.2s 4 ease-in-out;
         }
 
         @keyframes shakeit {
@@ -63,6 +63,29 @@
             }
             75% {
                 transform: translateX(10px);
+            }
+        }
+
+        .moveto30CSS {
+            animation: moveto30 0.4s ease-in-out forwards;
+        }
+
+        @keyframes moveto30 {
+            100% {
+                transform: translateX(30vw);
+            }
+        }
+
+        .movefrom30CSS {
+            animation: movefrom30 0.4s ease-in-out forwards;
+        }
+
+        @keyframes movefrom30 {
+            0%{
+              transform: translateX(30vw);
+            }
+            100% {
+                transform: translateX(0vw);
             }
         }
 
@@ -306,10 +329,10 @@
         }
 
         .body-partsCSS {
-            transition: all 1s;
+            transition: all 1.5s;
             filter: drop-shadow(0px 0px 8px rgba(255,231,0,0.8));
             display: block;
-            animation: shrink 1s linear 2 reverse;
+            animation: shrink 1.5s linear 2 reverse;
 
         }
         @keyframes shrink {
