@@ -35,9 +35,11 @@ function makeJump(){
     console.log("make jump");
     char.classList.toggle("jumpCSS");
     button[1].classList.toggle("yellow");
-    var jumpAudio = document.getElementById("#jump-audio");
+    if(char.classList.contains("jumpCSS")){
+    var jumpAudio = document.getElementById("jump-audio");
     jumpAudio.play();
-
+    jumpAudio.loop = true;
+    }
 }
 
 onejumpButton.addEventListener("click", makeoneJump)
@@ -46,6 +48,10 @@ function makeoneJump(){
     console.log("make onejump");
     char.classList.toggle("onejumpCSS");
     button[2].classList.toggle("yellow");
+    if(char.classList.contains("onejumpCSS")){
+    var jumpAudio = document.getElementById("jump-audio");
+    jumpAudio.play();
+    }
 }
 
 hitButton.addEventListener("click", makeHit)
@@ -96,6 +102,13 @@ function makeMove(){
     char5.classList.remove("girl2");
     charBg.classList.toggle("movebgCSS")
     button[5].classList.toggle("yellow");
+    if(button[5].classList.contains("yellow")){
+    var walkAudio = document.getElementById("walk-audio");
+    walkAudio.play();
+    }
+    button[5].addEventListener("click", stopSound);
+    function stopSound (){
+    walkAudio.pause(); }
 }
 
 fadeButton.addEventListener("click", makeFade)
@@ -112,6 +125,10 @@ function makeGlow(){
     console.log("make glow");
     char4.classList.toggle("glowCSS");
     button[7].classList.toggle("yellow");
+    if(char4.classList.contains("glowCSS")){
+    var glowAudio = document.getElementById("glow-audio");
+    glowAudio.play();
+    }
 }
 
 mirrorButton.addEventListener("click", makeMirror)

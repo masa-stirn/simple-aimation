@@ -12,7 +12,7 @@
 
         }
         .movebgCSS {
-            animation: movebg 20s linear infinite;
+            animation: movebg 5s linear infinite;
         }
 
          @keyframes movebg {
@@ -34,7 +34,7 @@
         }
 
         .moveCSS {
-            animation: walk 1s infinite steps(4);
+            animation: walk 0.7s infinite steps(4);
         }
 
         @keyframes walk {
